@@ -1,43 +1,23 @@
 import java.util.Scanner;
 
-class DebugPen {
-    private String color;
-    private String point;
-
-    public DebugPen() {
-        color = "black";
-        point = "fine";
-    }
-
-    public DebugPen(String color, String point) {
-        this.color = color;
-        this.point = point;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public String getPoint() {
-        return point;
-    }
-}
-
 public class DebugFour2 {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
         String color;
         String point;
+        DebugPen pen1;
+        DebugPen pen2;
 
         System.out.print("Enter a color ink for the pen >> ");
         color = input.nextLine();
-
         System.out.print("Enter a point size - fine, medium, or thick >> ");
         point = input.nextLine();
 
-        DebugPen pen1 = new DebugPen();
-        DebugPen pen2 = new DebugPen(color, point);
+ 
+        pen1 = new DebugPen();              
+        pen2 = new DebugPen(point, color); 
 
+        
         System.out.println("Default value pen:");
         display(pen1);
 
